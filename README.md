@@ -9,11 +9,20 @@ Array.prototype.myForEach = function(cb){ // 在Array对象的原型上添加 my
 		cb(item,index,array) // 调用
 	}
 }
-// 测试代码
-let arr = [1,2,3,4,5,6]
-arr.myForEach((itemindex,array)=>{
-	if(item %2 ==0){
-		console.log(item)
+```
+
+
+### map()方法的实现
+```javascript
+Array.prototype.myMap = function(cb) {
+	let newArr = [];
+	for (let i = 0; i < this.length; i++) {
+		let item = this[i];
+		let index = i;
+		let array = this;
+		let result = cb(item, index, array);
+		newArr.push(result)
 	}
-})
+	return newArr
+}
 ```
