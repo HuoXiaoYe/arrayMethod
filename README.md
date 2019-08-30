@@ -32,19 +32,18 @@ Array.prototype.myMap = function(cb) {
 ### filter()方法的实现
 > filter(): 有返回值，将返回结果为true的每一项push到一个新的数组中。
 ```javascript
-
-Array.prototype.myFilter = function(cb) {
+Array.prototype.myFilter = function(cb) {  // 实现方法和map()方法差不多
 	let newArr = [];
 	for (var i = 0; i < this.length; i++) {
 		let item = this[i];
 		let index = i;
 		let array = this;
-		let result = cb(item, index, array);
-		if (result) {
+		let result = cb(item, index, array); 
+		if (result) { // 判断回调函数的结果否为true，为true则将 该项的item push到新的数组中
 			newArr.push(item);
 		}
 	}
-	return newArr;
+	return newArr; // 返回新的数组
 }
 
 ```
