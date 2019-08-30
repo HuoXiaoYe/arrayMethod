@@ -1,5 +1,6 @@
 
 ### forEach()方法的实现
+> forEach()：无返回值，单纯的遍历数组。
 ```javascript
 Array.prototype.myForEach = function(cb){ // 在Array对象的原型上添加 myForEach()方法， 接受一个回调函数
 	for(let i=0; i<this.length; i++){ // this指的是当前实例化的数组对象
@@ -13,6 +14,7 @@ Array.prototype.myForEach = function(cb){ // 在Array对象的原型上添加 my
 
 
 ### map()方法的实现
+> map()：有返回值，无论返回什么都添加到新数组中。
 ```javascript
 Array.prototype.myMap = function(cb) {
 	let newArr = [];
