@@ -28,3 +28,23 @@ Array.prototype.myMap = function(cb) {
 	return newArr // 返回这个新的数组
 }
 ```
+
+### filter()方法的实现
+> filter(): 有返回值，将返回结果为true的每一项push到一个新的数组中。
+```javascript
+
+Array.prototype.myFilter = function(cb) {
+	let newArr = [];
+	for (var i = 0; i < this.length; i++) {
+		let item = this[i];
+		let index = i;
+		let array = this;
+		let result = cb(item, index, array);
+		if (result) {
+			newArr.push(item);
+		}
+	}
+	return newArr;
+}
+
+```
