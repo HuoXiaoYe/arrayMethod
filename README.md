@@ -47,3 +47,21 @@ Array.prototype.myFilter = function(cb) {  // 实现方法和map()方法差不�
 }
 
 ```
+
+### every()方法的实现
+> every(): 有返回值，如果数组中的每一项都通过了测试，则返回true，反之返回false.
+```javascript
+Array.prototype.myEvery = function(cb){
+	let bool = true;
+	for (var i = 0; i < this.length; i++) {
+		let item = this[i];
+		let index = i;
+		let array = this;
+		let result = cb(item, index, array);
+		if (!result) {
+			bool = false;
+			return bool;
+		}
+	}
+}
+```
