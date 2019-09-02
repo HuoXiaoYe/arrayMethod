@@ -64,3 +64,19 @@ Array.prototype.myEvery = function(cb){
 	return true;
 }
 ```
+
+### some()方法的实现
+```javascript
+Array.prototype.mySome = function() {
+	for (var i = 0; i < this.length; i++) {
+		let item = this[i];
+		let index = i;
+		let array = this;
+		let result = cb(item, index, array);
+		if (result) {
+			return true;
+		}
+	}
+	return false;
+}
+```
