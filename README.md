@@ -58,7 +58,7 @@ Array.prototype.myEvery = function(cb){
 		let array = this;
 		let result = cb(item, index, array);
 		if (!result) { // 当返回false时，怎停止遍历，返回false。
-			return false;
+			return false; 
 		}
 	}
 	return true;
@@ -74,9 +74,9 @@ Array.prototype.mySome = function() {
 		let array = this;
 		let result = cb(item, index, array);
 		if (result) {
-			return true;
+			return true; // 有一个通过了测试 则终止遍历，返回true
 		}
 	}
-	return false;
+	return false; // 一个都没有通过测试，返回false
 }
 ```
