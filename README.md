@@ -67,7 +67,7 @@ Array.prototype.myEvery = function(cb){
 
 ### some()方法的实现
 ```javascript
-Array.prototype.mySome = function() {
+Array.prototype.mySome = function(cb) {
 	for (var i = 0; i < this.length; i++) {
 		let item = this[i];
 		let index = i;
